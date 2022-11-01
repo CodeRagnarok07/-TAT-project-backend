@@ -1,18 +1,18 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 
-from .models import  Pagina, Seccion, SubTitulo
+from .models import  Pagina, Seccion, Contenido
 # Register your models here.
 
 
-class SubTituloInline(admin.StackedInline):
+class ContenidoInline(admin.StackedInline):
     extra = 1
-    model = SubTitulo
+    model = Contenido
 
 class SeccionInline(admin.StackedInline):
     extra = 1
     model = Seccion
-    inlines = [SubTituloInline, ]
+    inlines = [ContenidoInline, ]
 
 
 
@@ -22,8 +22,10 @@ class SeccionAdmin(SummernoteModelAdmin):
     list_display = ('titulo','posicion','pagina', )
     search_fields = ['titulo']
     list_filter = ('pagina__titulo_pagina',)
+    # summernote_fields = ['ContenidoInline__titulo_pagina', ]
 
-    inlines = [SubTituloInline, ]
+
+    inlines = [ContenidoInline, ]
 
 
 @admin.register(Pagina)

@@ -1,0 +1,27 @@
+[
+    {
+        "model": "paginas.pagina",
+        "pk": 1,
+        "fields": {
+            "titulo_pagina": "inicio"
+        }
+    },
+    {
+        "model": "paginas.pagina",
+        "fields": {
+            "titulo_pagina": "tramites"
+        }
+    },
+    {
+        "model": "paginas.seccion",
+        "pk": 1,
+        "fields": {
+            "titulo": "Realiza y consulta el estado de tus trámites desde donde te encuentres.",
+            "icono": "",
+            "imagen": "image_1_tcXN6lN.png",
+            "url_source": null,
+            "posicion": 2,
+            "pagina": 1
+        }
+    }
+]

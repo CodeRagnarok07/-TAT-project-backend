@@ -19,9 +19,11 @@ class Seccion(models.Model):
     posicion = models.IntegerField()
     pagina = models.ForeignKey(Pagina, on_delete=models.CASCADE)
 
-class SubTitulo(models.Model):
-    sub_titulo = models.CharField(max_length=500)
+class Contenido(models.Model):
+    titulo = models.CharField(max_length=500)
     icono = models.TextField()
+    contenido = models.TextField()
     posicion = models.IntegerField()
     seccion = models.ForeignKey(Seccion, on_delete=models.CASCADE)
+
 
