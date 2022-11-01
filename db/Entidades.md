@@ -18,9 +18,8 @@
   -  TextRich
 
 # nosotros
-- [ ] Autoridades
-- [ ] Equipo
-
+- [x] Autoridades
+- [x] Equipo
 
 -  nombre
 -  cargo
@@ -30,25 +29,27 @@
 
 # entradas
 
-- [ ] noticias
-- [ ] Haciendo la Diferencia
-- [ ] Congreso Internacional de Derecho Tributario
-
+- [x] noticias
+- [x] Haciendo la Diferencia
+- [x] Congreso Internacional de Derecho Tributario
 - contenido
 - fecha
 - galeria
 - Imagen principal
 
-# [ ] competencias
+
+# [x] competencias
 - titulo
 - text rich
+- order
 
-# [ ]  Preguntas frecuentes
+# [x]  Preguntas frecuentes
   - titulo
   - contenido
-  - order
+  - orden
   
-# [ ]  vacantes
+  
+# [x]  vacantes
   - titulo
   - lugar
   - requisitos [list]

@@ -8,7 +8,7 @@ from .models import Pagina, Seccion, Contenido
 class ContenidoInline(admin.StackedInline, SummernoteInlineModelAdmin):
     extra = 1
     model = Contenido
-    summernote_fields = ['contenido', ]
+    summernote_fields = ['text', ]
     fieldsets = (
         (None, {
             'classes': ('extrapretty',),
@@ -25,10 +25,12 @@ class ContenidoInline(admin.StackedInline, SummernoteInlineModelAdmin):
     )
 
 
-class SeccionInline(admin.StackedInline):
+class SeccionInline(admin.StackedInline,SummernoteInlineModelAdmin):
     extra = 1
     model = Seccion
     inlines = [ContenidoInline, ]
+    summernote_fields = ['text', ]
+
     fieldsets = (
         (None, {
             'classes': ('extrapretty',),
@@ -73,7 +75,7 @@ class SeccionAdmin(SummernoteModelAdmin):
 class PaginaAdmin(SummernoteModelAdmin):
     list_display = ('titulo_pagina', )
     search_fields = ['titulo']
-
+    readonly_fields = ('titulo_pagina',)
     # summernote_fields = ['descripcion', ]
     inlines = [SeccionInline, ]
 

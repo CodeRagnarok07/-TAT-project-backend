@@ -63,6 +63,9 @@ INSTALLED_APPS = [
     # apps
     'paginas',
     'entradas',
+    'nosotros',
+    'competencias',
+    'FAQ',
 ]
 
 MIDDLEWARE = [
