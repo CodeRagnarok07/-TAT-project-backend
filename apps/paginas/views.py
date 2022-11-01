@@ -1,25 +1,29 @@
-# from django.shortcuts import render
+from django.shortcuts import render
+from django.shortcuts import get_object_or_404
+# Create your views here.
 
-# # Create your views here.
+from .serializer import PaginaSerializers, SeccionSerializers, ContenidoSerializers
+from .models import Pagina, Seccion, Contenido
 
-# from .serializer import PaginaSerializers, SeccionSerializers, SubTituloSerializers
-# from .models import Pagina, Seccion, SubTitulo
-# from rest_framework import viewsets
+from rest_framework import viewsets
 
-# from rest_framework.response import Response
+from rest_framework.response import Response
+from rest_framework.decorators import action
 
-# class Paginas(viewsets.ViewSet):
-#     serializer_class = PaginaSerializers
-#     queryset = Pagina.objects.all()
-#     def list(self, request):
-#         serializer = PaginaSerializers(self.queryset, many=True)
-#         return Response(serializer.data)
-#         # return Response(serializer.data)
+class PaginaView(viewsets.ModelViewSet):
+    """
+     A simple ViewSet for listing or retrieving users.
+    """
+    queryset = Seccion.objects.all()
+    serializer_class  = SeccionSerializers
 
-# class Seccion(viewsets.ModelViewSet):
-#     serializer_class = SeccionSerializers
-#     queryset = Seccion.objects.all()
 
-# class SubTitulo(viewsets.ModelViewSet):
-#     serializer_class = SubTituloSerializers
-#     queryset = SubTitulo.objects.all()
+
+class SeccionView(viewsets.ModelViewSet):
+    serializer_class = SeccionSerializers
+    queryset = Seccion.objects.all()
+
+
+class ContenidoView(viewsets.ModelViewSet):
+    serializer_class = ContenidoSerializers
+    queryset = Contenido.objects.all()
