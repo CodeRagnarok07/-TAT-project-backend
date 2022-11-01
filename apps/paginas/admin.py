@@ -1,29 +1,70 @@
 from django.contrib import admin
-from django_summernote.admin import SummernoteModelAdmin
+from django_summernote.admin import SummernoteModelAdmin, SummernoteInlineModelAdmin
 
-from .models import  Pagina, Seccion, Contenido
+from .models import Pagina, Seccion, Contenido
 # Register your models here.
 
 
-class ContenidoInline(admin.StackedInline):
+class ContenidoInline(admin.StackedInline, SummernoteInlineModelAdmin):
     extra = 1
     model = Contenido
+    summernote_fields = ['contenido', ]
+    fieldsets = (
+        (None, {
+            'classes': ('extrapretty',),
+            'fields': ('titulo','posicion')
+        }),
+        ("icono", {
+            'classes': ('extrapretty', 'collapse'),
+            'fields': (('icono', ),)
+        }),
+        ("text", {
+            'classes': ('extrapretty', 'collapse'),
+            'fields': (('text', ),)
+        }),
+    )
+
 
 class SeccionInline(admin.StackedInline):
     extra = 1
     model = Seccion
     inlines = [ContenidoInline, ]
-
-
+    fieldsets = (
+        (None, {
+            'classes': ('extrapretty',),
+            'fields': ('titulo', 'imagen', 'posicion')
+        }),
+        ("icono", {
+            'classes': ('extrapretty', 'collapse'),
+            'fields': (('icono', ),)
+        }),
+        ("text", {
+            'classes': ('extrapretty', 'collapse'),
+            'fields': (('text', ),)
+        }),
+    )
 
 
 @admin.register(Seccion)
 class SeccionAdmin(SummernoteModelAdmin):
-    list_display = ('titulo','posicion','pagina', )
+    list_display = ('titulo', 'posicion', 'pagina', )
     search_fields = ['titulo']
     list_filter = ('pagina__titulo_pagina',)
-    # summernote_fields = ['ContenidoInline__titulo_pagina', ]
-
+    summernote_fields = ['text', ]
+    fieldsets = (
+        (None, {
+            'classes': ('extrapretty',),
+            'fields': ('titulo', 'imagen', 'posicion')
+        }),
+        ("icono", {
+            'classes': ('extrapretty', 'collapse'),
+            'fields': (('icono', ),)
+        }),
+        ("text", {
+            'classes': ('extrapretty', 'collapse'),
+            'fields': (('text', ),)
+        }),
+    )
 
     inlines = [ContenidoInline, ]
 
@@ -41,6 +82,3 @@ class PaginaAdmin(SummernoteModelAdmin):
     #     print("In get search results")
     #     results = super().get_search_results(request, queryset, search_term)
     #     return results
-
-   
-
