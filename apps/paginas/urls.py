@@ -1,14 +1,8 @@
-from rest_framework import routers
-from .views import PaginaView , SeccionView, ContenidoView
+from django.urls import path, include
+from .views import PaginasListView, PaginaView
 
-router = routers.DefaultRouter()
+urlpatterns = [
+    path('',  PaginasListView.as_view(), name="paginas"),
+    path('<int:page>',  PaginaView.as_view(), name="paginas"),
 
-# page_list = PaginaView.as_view({'get': 'list'})
-# page_detail = PaginaView.as_view({'get': 'retrieve'})
-
-
-router.register(r'paginas', PaginaView, basename='paginas')
-router.register('seccion', SeccionView)
-router.register('sub-titulo', ContenidoView)
-
-urlpatterns = router.urls
+]

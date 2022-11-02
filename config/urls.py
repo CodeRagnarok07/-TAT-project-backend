@@ -26,9 +26,7 @@ from rest_framework import routers
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name="index.html"), name="index"),
-    
     path('paginas/', include("paginas.urls")),
-
     path('admin/', admin.site.urls, name="admin"),
     path('summernote/', include('django_summernote.urls')),
 ]
