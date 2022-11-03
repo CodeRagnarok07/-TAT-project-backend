@@ -97,31 +97,14 @@ class NoticiasListView(APIView, PaginationHandlerMixin):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-# see detail
-
-
-
-# List all from searsh with pagination
-# List all from searsh whit date with pagination
-class NoticiasFilterView(APIView, PaginationHandlerMixin):
-    queryset = Noticia.objects.all().order_by("-fecha").filter(fecha__year='2011')
-    serializer_class = NoticiaSerializers
-    pagination_class = PaginationEntradas
-
-    def get(self, request, format=None, *args, **kwargs):
-        instance = Noticia.objects.all()
-        page = self.paginate_queryset(instance)
-        if page is not None:
-            serializer = self.get_paginated_response(self.serializer_class(page, many=True).data)
-        else:
-            serializer = self.serializer_class(instance, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
 
 # - [ ] detail noticia
 class NoticiaView(APIView):
-    def get(self, request, pk):
-        queryset = Noticia.objects.filter(pk=pk)
+    """
+    url: http://127.0.0.1:8000/noticias/titulo
+    """
+    def get(self, request, titulo):
+        queryset = Noticia.objects.filter(titulo=titulo)
         serializer = NoticiaSerializers(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 

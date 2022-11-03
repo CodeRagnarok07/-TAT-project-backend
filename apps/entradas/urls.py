@@ -1,8 +1,8 @@
 from django.urls import path, include
-from .views import NoticiasListView
+from .views import NoticiasListView, NoticiaView
 
 urlpatterns = [
     path('noticias/',  NoticiasListView.as_view(), name="noticias"),
-    # path('<int:page>',  PaginaView.as_view(), name="paginas"),
+    path('noticias/<str:titulo>/',  NoticiaView.as_view(), name="view_noticias"),
 
 ]
