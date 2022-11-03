@@ -1,5 +1,14 @@
 [
     {
+        "model": "django_summernote.attachment",
+        "pk": 1,
+        "fields": {
+            "name": "image.png",
+            "file": "django-summernote/2022-11-02/8e0e9be1-efc0-4e58-bea6-401c3acd545e.png",
+            "uploaded": "2022-11-02T13:18:17.205Z"
+        }
+    },
+    {
         "model": "paginas.pagina",
         "pk": 1,
         "fields": {
@@ -180,8 +189,8 @@
         "fields": {
             "titulo": "Realiza y consulta el estado de tus trámites desde donde te encuentres.",
             "icono": "",
-            "imagen": "image_1_tcXN6lN.png",
-            "text": "Toda la información que necesites a un solo click.",
+            "imagen": "Rectangle_8_fDTlxHd.png",
+            "text": "<p>Toda la información que necesites a un solo click.</p>",
             "posicion": 1,
             "pagina": 1
         }
@@ -202,10 +211,10 @@
         "model": "paginas.seccion",
         "pk": 3,
         "fields": {
-            "titulo": "Secciones de interés",
+            "titulo": "Secciones de interes",
             "icono": "<svg width=\"29\" height=\"28\" viewBox=\"0 0 29 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M28.85 23.5062L27.6828 19.1609L23.0281 1.76562C22.8733 1.18944 22.4959 0.69836 21.979 0.400366C21.4622 0.102373 20.8481 0.0218677 20.2719 0.176555L15.9266 1.34374L15.7859 1.38593C15.5763 1.11097 15.3062 0.88801 14.9964 0.734365C14.6867 0.580719 14.3457 0.50052 14 0.499992H9.5C9.10413 0.501057 8.71574 0.607865 8.375 0.809368C8.03426 0.607865 7.64586 0.501057 7.25 0.499992H2.75C2.15326 0.499992 1.58097 0.737045 1.15901 1.159C0.737053 1.58096 0.5 2.15326 0.5 2.74999V25.25C0.5 25.8467 0.737053 26.419 1.15901 26.841C1.58097 27.2629 2.15326 27.5 2.75 27.5H7.25C7.64586 27.4989 8.03426 27.3921 8.375 27.1906C8.71574 27.3921 9.10413 27.4989 9.5 27.5H14C14.5967 27.5 15.169 27.2629 15.591 26.841C16.0129 26.419 16.25 25.8467 16.25 25.25V11.2437L18.9922 21.4812L20.1594 25.8266C20.2868 26.3071 20.5697 26.7319 20.9641 27.0347C21.3584 27.3374 21.8419 27.5011 22.3391 27.5C22.5332 27.4966 22.7264 27.4731 22.9156 27.4297L27.2609 26.2625C27.5468 26.1857 27.8146 26.053 28.0487 25.8719C28.2829 25.6909 28.4788 25.4651 28.625 25.2078C28.7749 24.9539 28.8722 24.6723 28.9108 24.3799C28.9495 24.0876 28.9288 23.7904 28.85 23.5062ZM17.9656 8.95156L22.3109 7.78437L25.2219 18.6547L20.8766 19.8219L17.9656 8.95156ZM20.8484 2.35624L21.7344 5.60468L17.3891 6.77187L16.5031 3.52343L20.8484 2.35624ZM14 2.74999V19.625H9.5V2.74999H14ZM7.25 2.74999V6.12499H2.75V2.74999H7.25ZM2.75 25.25V8.37499H7.25V25.25H2.75ZM14 25.25H9.5V21.875H14V25.25ZM26.6844 24.0828L22.3391 25.25L21.4531 21.9875L25.8125 20.8203L26.6844 24.0828Z\" fill=\"#0054A4\"/>\r\n</svg>",
             "imagen": "",
-            "text": null,
+            "text": "",
             "posicion": 3,
             "pagina": 1
         }
@@ -633,6 +642,173 @@
             "text": "",
             "posicion": 1,
             "seccion": 19
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 1,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2022-11-15",
+            "contenido": null,
+            "imagen_principal": "Rectangle_9.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 2,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2020-11-08",
+            "contenido": "",
+            "imagen_principal": "Rectangle_8_xXEQkqH.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 3,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 4,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 4,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 6,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 7,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 8,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 9,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 10,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.noticia",
+        "pk": 11,
+        "fields": {
+            "titulo": "Comunicado cierre Sede Central del TAT en Agosto de 2022",
+            "fecha": "2005-02-23",
+            "contenido": "<ul><li><br></li></ul><table class=\"table table-bordered\"><tbody><tr><td><br></td><td><hr><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table><ul><li><b>s</b></li><li>a</li></ul><p><br></p><p><br></p><h1 class=\"\"></h1>",
+            "imagen_principal": "Rectangle_9_JpjNyoN.png"
+        }
+    },
+    {
+        "model": "entradas.galerianoticia",
+        "pk": 1,
+        "fields": {
+            "imagen": "Rectangle_8.png",
+            "entrada": 1
+        }
+    },
+    {
+        "model": "entradas.galerianoticia",
+        "pk": 2,
+        "fields": {
+            "imagen": "Rectangle_9_XeoE1bC.png",
+            "entrada": 1
+        }
+    },
+    {
+        "model": "entradas.galerianoticia",
+        "pk": 3,
+        "fields": {
+            "imagen": "Rectangle_8_8tu7Ogp.png",
+            "entrada": 3
+        }
+    },
+    {
+        "model": "entradas.galerianoticia",
+        "pk": 4,
+        "fields": {
+            "imagen": "Magistrado_Rafael_Brown_Rangel.jpg",
+            "entrada": 3
+        }
+    },
+    {
+        "model": "entradas.galerianoticia",
+        "pk": 5,
+        "fields": {
+            "imagen": "image_1_SW5WJrE.png",
+            "entrada": 3
+        }
+    },
+    {
+        "model": "entradas.galerianoticia",
+        "pk": 6,
+        "fields": {
+            "imagen": "Magistrado_Rafael_Brown_Rangel_1.png",
+            "entrada": 3
+        }
+    },
+    {
+        "model": "competencias.competencias",
+        "pk": 1,
+        "fields": {
+            "titulo": "asdasd",
+            "order": 1,
+            "text": "<p>sadsad</p>"
         }
     }
 ]
